@@ -1,0 +1,16 @@
+<launch>
+    <!--人脸检测节点 face_detector包-->
+    <node pkg="face_detector" type="facedetect.py" name="face_detector_node" output="screen"/>
+    <!--多点导航触发节点 multi_nav包-->
+    <!--<node pkg="multi_nav" type="multiNav.py" name="multi_nav_trigger" output="screen"/>-->
+    <!--语音播报节点 welcome_robot包-->
+    <node pkg="welcome_robot" type="tts_speak.py" name="tts_speak_node" output="screen"/>
+    <!--讯飞语音识别节点-->
+    <node pkg="welcome_robot" type="xfyun_asr.py" name="xfyun_asr_node" output="screen"/>
+    <!--语音指令控制节点，语音控制底盘移动-->
+    <node pkg="welcome_robot" type="voice_cmd_control.py" name="voice_cmd_control_node" output="screen"/>
+    <node pkg="welcome_robot" type="keyboard_control.py" name="keyboard_ctrl_node" output="screen" launch-prefix="xterm -e"/>
+    <!-- 星火大模型对话节点 -->
+    <node pkg="welcome_robot" type="spark_chat_node.py" name="spark_chat_node" output="screen"/>
+
+</launch>

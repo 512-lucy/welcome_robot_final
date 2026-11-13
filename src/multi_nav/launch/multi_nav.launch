@@ -1,0 +1,4 @@
+<launch>
+    <!-- 启动多点导航脚本 -->
+    <node pkg="multi_nav" type="multiNav.py" name="multi_nav" output="screen"/>
+</launch>
